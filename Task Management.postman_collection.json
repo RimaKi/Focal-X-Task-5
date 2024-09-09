@@ -1,0 +1,2693 @@
+{
+	"info": {
+		"_postman_id": "c0852be2-8905-4237-875e-7ee16e899947",
+		"name": "Task Management",
+		"description": "# 📄 Get started here\n\nThis template contains a boilerplate for documentation that you can quickly customize and reuse.\n\n## 🔖 How to use this template\n\n- Replace the content given brackets (()) with your API's details.\n- Tips are formatted in `codespan` - feel free to read and remove them.\n    \n\n---\n\n`Start with a brief overview of what your API offers.`\n\nThe ((product name)) provides many API products, tools, and resources that enable you to ((add product value here)).\n\n`You can also list the APIs you offer, link to the relevant pages, or do both in this section.`\n\n## **Getting started guide**\n\n`List the steps or points required to start using your APIs. Make sure to cover everything required to reach success with your API as quickly as possible.`\n\nTo start using the ((add APIs here)), you need to -\n\n`The points given below are from The Postman API's documentation. You can reference it to write your own getting started guide.`\n\n- You must use a valid API Key to send requests to the API endpoints. You can get your API key from Postman's [integrations dashboard](https://go.postman.co/settings/me/api-keys).\n- The API has [rate and usage limits](https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/).\n- The API only responds to HTTPS-secured communications. Any requests sent via HTTP return an HTTP 301 redirect to the corresponding HTTPS resources.\n- The API returns request responses in JSON format. When an API request returns an error, it is sent in the JSON response as an error key.\n    \n\n## Authentication\n\n`Add details on the authorization keys/tokens required, steps that cover how to get them, and the relevant error codes.`\n\nThe ((product name)) API uses ((add your API's authorization type)) for authentication.\n\n`The details given below are from the Postman API's documentation. You can reference it to write your own authentication section.`\n\nPostman uses API keys for authentication. You can generate a Postman API key in the [API keys](https://postman.postman.co/settings/me/api-keys) section of your Postman account settings.\n\nYou must include an API key in each request to the Postman API with the X-Api-Key request header.\n\n### Authentication error response\n\nIf an API key is missing, malformed, or invalid, you will receive an HTTP 401 Unauthorized response code.\n\n## Rate and usage limits\n\n`Use this section to cover your APIs' terms of use. Include API limits, constraints, and relevant error codes, so consumers understand the permitted API usage and practices.`\n\n`The example given below is from The Postman API's documentation. Use it as a reference to write your APIs' terms of use.`\n\nAPI access rate limits apply at a per-API key basis in unit time. The limit is 300 requests per minute. Also, depending on your plan, you may have usage limits. If you exceed either limit, your request will return an HTTP 429 Too Many Requests status code.\n\nEach API response returns the following set of headers to help you identify your use status:\n\n| Header | Description |\n| --- | --- |\n| `X-RateLimit-Limit` | The maximum number of requests that the consumer is permitted to make per minute. |\n| `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window. |\n| `X-RateLimit-Reset` | The time at which the current rate limit window resets in UTC epoch seconds. |\n\n### 503 response\n\nAn HTTP `503` response from our servers indicates there is an unexpected spike in API access traffic. The server is usually operational within the next five minutes. If the outage persists or you receive any other form of an HTTP `5XX` error, [contact support](https://support.postman.com/hc/en-us/requests/new/).\n\n### **Need some help?**\n\n`Add links that customers can refer to whenever they need help.`\n\nIn case you have questions, go through our tutorials ((link to your video or help documentation here)). Or visit our FAQ page ((link to the relevant page)).\n\nOr you can check out our community forum, there’s a good chance our community has an answer for you. Visit our developer forum ((link to developer forum)) to review topics, ask questions, and learn from others.\n\n`You can also document or add links to libraries, code examples, and other resources needed to make a request.`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19544802"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"111222111222\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"111222111222\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 17:40:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"uuid\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n            \"name\": \"Ahmad Mohamad\",\n            \"email\": \"admin@gmail.com\",\n            \"email_verified_at\": null,\n            \"national_id\": \"0014141414100\",\n            \"is_male\": 1,\n            \"deleted_at\": null,\n            \"role\": \"admin\",\n            \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTAzNjA0LCJleHAiOjE3MjU5MDcyMDQsIm5iZiI6MTcyNTkwMzYwNCwianRpIjoiUDJRbFZmZ1JWNmZRbEQ4ZiIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YZVBddMaSoe9tSf5WZm6Uj5yI209GDAswhf1UcYmgSc\"\n        }\n    },\n    \"message\": \"trans.method.POST.success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTAzNjA0LCJleHAiOjE3MjU5MDcyMDQsIm5iZiI6MTcyNTkwMzYwNCwianRpIjoiUDJRbFZmZ1JWNmZRbEQ4ZiIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YZVBddMaSoe9tSf5WZm6Uj5yI209GDAswhf1UcYmgSc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 17:40:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				},
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTA0MzgyLCJleHAiOjE3MjU5MDc5ODIsIm5iZiI6MTcyNTkwNDM4MiwianRpIjoiaXZuT29CYXNQb1Nsc0RkRiIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9CrlT3BSxgQ8bknNs5s4N5FoaZUjyGUOEORO2FHBrT8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\":\"111222111222\",\n    \"password\":\"Admin@123123123\",\n    \"password_confirmation\":\"Admin@123123123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/change-password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"change-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "failed change",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"old_password\":\"1112221112227\",\n    \"password\":\"Admin@123123123\",\n    \"password_confirmation\":\"Admin@123123123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/change-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"change-password"
+									]
+								}
+							},
+							"status": "Payment Required",
+							"code": 402,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 18:13:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"wrong ola password\",\n    \"details\": [\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Controller.php\",\n            \"line\": 54,\n            \"function\": \"changePassword\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\UserController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Route.php\",\n            \"line\": 259,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 806,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/app/Http/Middleware/JsonResponse.php\",\n            \"line\": 19,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"App\\\\Http\\\\Middleware\\\\JsonResponse\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 159,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 125,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 87,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Auth\\\\Middleware\\\\Authenticate\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php\",\n            \"line\": 99,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/public/index.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php\",\n            \"line\": 16,\n            \"args\": [\n                \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/public/index.php\"\n            ],\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "success change password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"old_password\":\"111222111222\",\n    \"password\":\"Admin@123123123\",\n    \"password_confirmation\":\"Admin@123123123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/change-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"change-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 18:13:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"Done\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1ODg4MDIxLCJleHAiOjE3MjU4OTE2MjEsIm5iZiI6MTcyNTg4ODAyMSwianRpIjoiOHl6TFJPSnU0Nk9EMXN4RSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ybrAD1VNpxlbC8TU7Yfvxw9b7ZQ61Gcns-l1Ks6Ntos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ahmad Ahmad\",\n    \"email\":\"ahmad@gmail.com\",\n    \"national_id\":\"014141414100\",\n    \"is_male\":true,\n    \"role\":\"manager\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Creates a collection using the [Postman Collection v2 schema format](https://schema.postman.com/json/collection/v2.1.0/docs/index.html). Include a `collection` object in the request body that contains the following required properties:\n\n*   `info` — An **object** that contains the following properties:\n    *   `name` — A **string** value that contains the collection's name.\n    *   `schema` — A **string** that contains a URL to the collection's schema. For example, the `https://schema.getpostman.com/collection/v1` URL.\n*   `item` — An **object** that contains the HTTP request and response information.\n    *   `request` — An **object** that contains the collection's request information. For a complete list of values, refer to the `definitions.request` entry in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json). If you pass an empty object for this value, the system defaults to an untitled GET request.\n\n**Note:**\n\n*   For a complete list of available property values for this endpoint, use the following references available in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json):\n    *   `info` object — Use the `definitions.info` entry.\n    *   `item` object — Use the `definitions.items` entry.\n*   For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json)."
+					},
+					"response": [
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"rima kiwan\",\n    \"email\":\"rima@gmail.com\",\n    \"national_id\":\"14141414141\",\n    \"is_male\":false,\n    \"role\":\"user\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 13:20:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"name\": \"rima kiwan\",\n            \"email\": \"rima@gmail.com\",\n            \"national_id\": \"14141414141\",\n            \"is_male\": false,\n            \"uuid\": \"b3d252b1-dad7-4aa0-bd0b-607d6eafa119\",\n            \"role\": \"user\"\n        }\n    },\n    \"message\": \"added successfully\"\n}"
+						},
+						{
+							"name": "Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"molaham Ahmad\",\n    \"email\":\"molham@gmail.com\",\n    \"national_id\":\"014141414141\",\n    \"is_male\":true,\n    \"role\":\"admin\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 13:26:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"name\": \"molaham Ahmad\",\n            \"email\": \"molham@gmail.com\",\n            \"national_id\": \"014141414141\",\n            \"is_male\": true,\n            \"uuid\": \"e883bf7e-90b1-45ba-a9ff-51b6c567adaf\",\n            \"role\": \"admin\"\n        }\n    },\n    \"message\": \"added successfully\"\n}"
+						},
+						{
+							"name": "manager",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Ahmad Ahmad\",\n    \"email\":\"ahmad@gmail.com\",\n    \"national_id\":\"014141414100\",\n    \"is_male\":true,\n    \"role\":\"manager\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 13:28:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"name\": \"Ahmad Ahmad\",\n            \"email\": \"ahmad@gmail.com\",\n            \"national_id\": \"014141414100\",\n            \"is_male\": true,\n            \"uuid\": \"3210d942-8804-45f4-a65e-3215fe0687d1\",\n            \"role\": \"manager\"\n        }\n    },\n    \"message\": \"added successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "index Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1ODg4MDIxLCJleHAiOjE3MjU4OTE2MjEsIm5iZiI6MTcyNTg4ODAyMSwianRpIjoiOHl6TFJPSnU0Nk9EMXN4RSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ybrAD1VNpxlbC8TU7Yfvxw9b7ZQ61Gcns-l1Ks6Ntos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Gets information about a collection. For a complete list of this endpoint's possible values, use the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json)."
+					},
+					"response": [
+						{
+							"name": "index User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:49:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"uuid\": \"3210d942-8804-45f4-a65e-3215fe0687d1\",\n                \"name\": \"mazen Al abd\",\n                \"email\": \"Mazen.AL@gmail.com\",\n                \"email_verified_at\": null,\n                \"national_id\": \"141414141000\",\n                \"is_male\": \"male\",\n                \"deleted_at\": \"2024-09-09T17:35:30.000000Z\",\n                \"tasks_performed\": [],\n                \"added_tasks\": []\n            },\n            {\n                \"uuid\": \"3918d98a-3abe-4e3d-9963-0d5f0069cb09\",\n                \"name\": \"user\",\n                \"email\": \"user@gmail.com\",\n                \"email_verified_at\": null,\n                \"national_id\": \"111444111444\",\n                \"is_male\": \"male\",\n                \"deleted_at\": null,\n                \"tasks_performed\": [],\n                \"added_tasks\": []\n            },\n            {\n                \"uuid\": \"b3d252b1-dad7-4aa0-bd0b-607d6eafa119\",\n                \"name\": \"rima kiwan\",\n                \"email\": \"rima@gmail.com\",\n                \"email_verified_at\": null,\n                \"national_id\": \"14141414141\",\n                \"is_male\": \"female\",\n                \"deleted_at\": \"2024-09-09T17:36:03.000000Z\",\n                \"tasks_performed\": [],\n                \"added_tasks\": []\n            },\n            {\n                \"uuid\": \"c88dea07-9b74-43e3-aa03-0a124e20895a\",\n                \"name\": \"manager\",\n                \"email\": \"manager@gmail.com\",\n                \"email_verified_at\": null,\n                \"national_id\": \"111333111333\",\n                \"is_male\": \"male\",\n                \"deleted_at\": null,\n                \"tasks_performed\": [],\n                \"added_tasks\": []\n            },\n            {\n                \"uuid\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n                \"name\": \"Ahmad Mohamad\",\n                \"email\": \"admin@gmail.com\",\n                \"email_verified_at\": null,\n                \"national_id\": \"0014141414100\",\n                \"is_male\": \"male\",\n                \"deleted_at\": null,\n                \"tasks_performed\": [],\n                \"added_tasks\": [\n                    {\n                        \"id\": 1,\n                        \"title\": \"Task 1\",\n                        \"description\": \"Test Task\",\n                        \"due_date\": null,\n                        \"priority\": \"low\",\n                        \"status\": \"pending\",\n                        \"assigned_to\": null,\n                        \"created_by\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n                        \"create\": \"2024-09-09T18:43:35.000000Z\",\n                        \"update\": \"2024-09-09T18:43:35.000000Z\",\n                        \"deleted_at\": null\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"e883bf7e-90b1-45ba-a9ff-51b6c567adaf\",\n                \"name\": \"mazen Al abd\",\n                \"email\": \"bla.AL@gmail.com\",\n                \"email_verified_at\": null,\n                \"national_id\": \"014141414141\",\n                \"is_male\": \"male\",\n                \"deleted_at\": null,\n                \"tasks_performed\": [],\n                \"added_tasks\": []\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/users?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/users?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/users?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/users\",\n        \"per_page\": 25,\n        \"prev_page_url\": null,\n        \"to\": 6,\n        \"total\": 6\n    },\n    \"message\": \"trans.method.GET.success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1ODg4MDIxLCJleHAiOjE3MjU4OTE2MjEsIm5iZiI6MTcyNTg4ODAyMSwianRpIjoiOHl6TFJPSnU0Nk9EMXN4RSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ybrAD1VNpxlbC8TU7Yfvxw9b7ZQ61Gcns-l1Ks6Ntos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/d6316c50-3cb0-4f40-9074-b04a1d727fc3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"d6316c50-3cb0-4f40-9074-b04a1d727fc3"
+							]
+						},
+						"description": "Gets all of your [collections](https://www.getpostman.com/docs/collections). The response includes all of your subscribed collections."
+					},
+					"response": []
+				},
+				{
+					"name": "Update a collection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1ODg4MDIxLCJleHAiOjE3MjU4OTE2MjEsIm5iZiI6MTcyNTg4ODAyMSwianRpIjoiOHl6TFJPSnU0Nk9EMXN4RSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ybrAD1VNpxlbC8TU7Yfvxw9b7ZQ61Gcns-l1Ks6Ntos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"mazen Al abd\",\n    \"email\":\"Mazen.AL@gmail.com\",\n    \"national_id\":\"141414141000\",\n    \"is_male\":true\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/3210d942-8804-45f4-a65e-3215fe0687d1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"3210d942-8804-45f4-a65e-3215fe0687d1"
+							]
+						},
+						"description": "Updates a collection using the [Postman Collection v2 schema format](https://schema.postman.com/json/collection/v2.1.0/docs/index.html). Include a `collection` object in the request body that contains the following required properties:\n\n- `info` — An **object** that contains the following properties:\n    - `name` — A **string** value that contains the collection's name.\n    - `schema` — A **string** that contains a URL to the collection's schema. For example, the `https://schema.getpostman.com/collection/v1` URL.\n- `item` — An **object** that contains the HTTP request and response information.\n    - `request` — An **object** that contains the collection's request information. For a complete list of values, refer to the `definitions.request` entry in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json). If you pass an empty object for this value, the system defaults to an untitled GET request.\n\n**Note:**\n\n- For a complete list of available property values for this endpoint, use the following references available in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json):\n    - `info` object — Use the `definitions.info` entry.\n    - `item` object — Use the `definitions.items` entry.\n- For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).\n    \n\n### Important\n\nUse caution when using this endpoint. The system will replace the existing collection with the values passed in the request body."
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"mazen Al abd\",\n    \"email\":\"Mazen.AL@gmail.com\",\n    \"national_id\":\"141414141000\",\n    \"is_male\":true\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users/3210d942-8804-45f4-a65e-3215fe0687d1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"3210d942-8804-45f4-a65e-3215fe0687d1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 14:04:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"uuid\": \"3210d942-8804-45f4-a65e-3215fe0687d1\",\n            \"name\": \"mazen Al abd\",\n            \"email\": \"Mazen.AL@gmail.com\",\n            \"email_verified_at\": null,\n            \"national_id\": \"141414141000\",\n            \"is_male\": true,\n            \"deleted_at\": null\n        }\n    },\n    \"message\": \"updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a collection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTAzMDg1LCJleHAiOjE3MjU5MDY2ODUsIm5iZiI6MTcyNTkwMzA4NSwianRpIjoiNHU3S25qOEYwN1V0Nm5hSyIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9aCTWdhpVCujgNgOjtWF_oCzrBywdEYzjVNAHS8Yaeo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/b3d252b1-dad7-4aa0-bd0b-607d6eafa119",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"b3d252b1-dad7-4aa0-bd0b-607d6eafa119"
+							]
+						},
+						"description": "Deletes a collection."
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users/b3d252b1-dad7-4aa0-bd0b-607d6eafa119",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"b3d252b1-dad7-4aa0-bd0b-607d6eafa119"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 17:36:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"deleted successfully\"\n}"
+						},
+						{
+							"name": "failed response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users/b3d252b1-dad7-4aa0-bd0b",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"b3d252b1-dad7-4aa0-bd0b"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 17:38:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Not Found.\",\n    \"details\": [\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php\",\n            \"line\": 463,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 188,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 159,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 125,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 87,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Auth\\\\Middleware\\\\Authenticate\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php\",\n            \"line\": 99,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/public/index.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php\",\n            \"line\": 16,\n            \"args\": [\n                \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/public/index.php\"\n            ],\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "The `/collections` endpoints let you manage your [collections](https://learning.postman.com/docs/sending-requests/intro-to-collections/)."
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"collection\": {\n        \"info\": {\n            \"name\": \"{{collectionName}}\",\n            \"schema\": \"{{collectionSchemaUrl}}\"\n        },\n        \"item\": [\n            {\n                \"request\": {}\n            }\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/collections",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"collections"
+							],
+							"query": [
+								{
+									"key": "workspace",
+									"value": "{{workspaceId}}",
+									"description": "Optional. A workspace ID in which to create the collection.\n\nIf you do not include this query parameter, the system creates the collection in your \"My Workspace\" workspace.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Creates a collection using the [Postman Collection v2 schema format](https://schema.postman.com/json/collection/v2.1.0/docs/index.html). Include a `collection` object in the request body that contains the following required properties:\n\n*   `info` — An **object** that contains the following properties:\n    *   `name` — A **string** value that contains the collection's name.\n    *   `schema` — A **string** that contains a URL to the collection's schema. For example, the `https://schema.getpostman.com/collection/v1` URL.\n*   `item` — An **object** that contains the HTTP request and response information.\n    *   `request` — An **object** that contains the collection's request information. For a complete list of values, refer to the `definitions.request` entry in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json). If you pass an empty object for this value, the system defaults to an untitled GET request.\n\n**Note:**\n\n*   For a complete list of available property values for this endpoint, use the following references available in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json):\n    *   `info` object — Use the `definitions.info` entry.\n    *   `item` object — Use the `definitions.items` entry.\n*   For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json)."
+					},
+					"response": [
+						{
+							"name": "Create Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Task 1\",\n    \"description\":\"Test Task\",\n    \"priority\":\"low\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 20:55:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"added successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "index tasks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.getpostman.com/collections/{{collectionId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"{{collectionId}}"
+							],
+							"query": [
+								{
+									"key": "access_key",
+									"value": "{{accessKey}}",
+									"description": "Optional. A collection's read-only access key. Using this query parameter does not require an API key to call the endpoint.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets information about a collection. For a complete list of this endpoint's possible values, use the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json)."
+					},
+					"response": [
+						{
+							"name": "index all tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "access_key",
+											"value": "{{accessKey}}",
+											"description": "Optional. A collection's read-only access key. Using this query parameter does not require an API key to call the endpoint.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:20:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Task 1\",\n            \"description\": \"Test Task\",\n            \"due_date\": null,\n            \"priority\": \"low\",\n            \"status\": \"pending\",\n            \"assigned_to\": null,\n            \"created_by\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n            \"create\": \"2024-09-09T18:43:35.000000Z\",\n            \"update\": \"2024-09-09T18:43:35.000000Z\",\n            \"deleted_at\": null\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Task 2\",\n            \"description\": \"Test Task very important\",\n            \"due_date\": null,\n            \"priority\": \"very_important\",\n            \"status\": \"pending\",\n            \"assigned_to\": null,\n            \"created_by\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n            \"create\": \"2024-09-09T18:57:43.000000Z\",\n            \"update\": \"2024-09-09T19:06:05.000000Z\",\n            \"deleted_at\": null\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						},
+						{
+							"name": "index tasks with filter by priority",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"priority\":\"low\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "access_key",
+											"value": "{{accessKey}}",
+											"description": "Optional. A collection's read-only access key. Using this query parameter does not require an API key to call the endpoint.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:22:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Task 1\",\n            \"description\": \"Test Task\",\n            \"due_date\": null,\n            \"priority\": \"low\",\n            \"status\": \"pending\",\n            \"assigned_to\": null,\n            \"created_by\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n            \"create\": \"2024-09-09T18:43:35.000000Z\",\n            \"update\": \"2024-09-09T18:43:35.000000Z\",\n            \"deleted_at\": null\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						},
+						{
+							"name": "index tasks with filter by status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"priority\":\"low\",\n    \"status\":\"failed\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "access_key",
+											"value": "{{accessKey}}",
+											"description": "Optional. A collection's read-only access key. Using this query parameter does not require an API key to call the endpoint.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:28:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Task 2\",\n            \"description\": \"Test Task very important\",\n            \"due_date\": null,\n            \"priority\": \"very_important\",\n            \"status\": \"failed\",\n            \"assigned_to\": null,\n            \"created_by\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n            \"create\": \"2024-09-09T18:57:43.000000Z\",\n            \"update\": \"2024-09-09T19:25:33.000000Z\",\n            \"deleted_at\": null\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"2"
+							]
+						},
+						"description": "Deletes a collection."
+					},
+					"response": [
+						{
+							"name": "Delete Task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:38:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTA4NTk4LCJleHAiOjE3MjU5MTIxOTgsIm5iZiI6MTcyNTkwODU5OCwianRpIjoiNGd6cWIxaE9iSldzZXpqQyIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xsd0TQDfzhhiw6XrEtYyJfCpC2IBSeu6n4CHJu3zURA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \n    \"description\":\"Test Task very important\",\n    \"priority\":\"very_important\",\n    \"status\":\"failed\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"2"
+							]
+						},
+						"description": "Updates a collection using the [Postman Collection v2 schema format](https://schema.postman.com/json/collection/v2.1.0/docs/index.html). Include a `collection` object in the request body that contains the following required properties:\n\n- `info` — An **object** that contains the following properties:\n    - `name` — A **string** value that contains the collection's name.\n    - `schema` — A **string** that contains a URL to the collection's schema. For example, the `https://schema.getpostman.com/collection/v1` URL.\n- `item` — An **object** that contains the HTTP request and response information.\n    - `request` — An **object** that contains the collection's request information. For a complete list of values, refer to the `definitions.request` entry in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json). If you pass an empty object for this value, the system defaults to an untitled GET request.\n\n**Note:**\n\n- For a complete list of available property values for this endpoint, use the following references available in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json):\n    - `info` object — Use the `definitions.info` entry.\n    - `item` object — Use the `definitions.items` entry.\n- For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).\n    \n\n### Important\n\nUse caution when using this endpoint. The system will replace the existing collection with the values passed in the request body."
+					},
+					"response": [
+						{
+							"name": "failed case",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \n    \"description\":\"Test Task very important\",\n    \"priority\":\"very_important\",\n    \"ststus\":\"failed\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks",
+										"2"
+									]
+								}
+							},
+							"status": "Payment Required",
+							"code": 402,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:03:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"You do not have permission to edit this task.\",\n    \"details\": [\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/app/Http/Controllers/TaskController.php\",\n            \"line\": 48,\n            \"function\": \"updateTask\",\n            \"class\": \"App\\\\Services\\\\TaskService\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Controller.php\",\n            \"line\": 54,\n            \"function\": \"update\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\TaskController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Route.php\",\n            \"line\": 259,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 806,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/app/Http/Middleware/JsonResponse.php\",\n            \"line\": 19,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"App\\\\Http\\\\Middleware\\\\JsonResponse\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 159,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 125,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 87,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Auth\\\\Middleware\\\\Authenticate\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 805,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 784,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 748,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 737,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php\",\n            \"line\": 99,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/public/index.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php\",\n            \"line\": 16,\n            \"args\": [\n                \"/run/media/rima/Data/FOXAL X/tasks/Task 5/Task_Management/public/index.php\"\n            ],\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Update Task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \n    \"description\":\"Test Task very important\",\n    \"priority\":\"very_important\",\n    \"status\":\"failed\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:25:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"task\": {\n            \"id\": 2,\n            \"title\": \"Task 2\",\n            \"description\": \"Test Task very important\",\n            \"due_date\": null,\n            \"priority\": \"very_important\",\n            \"status\": \"failed\",\n            \"assigned_to\": null,\n            \"created_by\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n            \"create\": \"2024-09-09T18:57:43.000000Z\",\n            \"update\": \"2024-09-09T19:25:33.000000Z\",\n            \"deleted_at\": null\n        }\n    },\n    \"message\": \"updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show tasks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTEyNDE0LCJleHAiOjE3MjU5MTYwMTQsIm5iZiI6MTcyNTkxMjQxNCwianRpIjoiRXNZZWJvelhlNDV0MkNEZSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9b507bHFA4xZ1lruUSg-JYSiDKlI0gGW6so7pj4nOzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							],
+							"query": [
+								{
+									"key": "workspace",
+									"value": "{{workspaceId}}",
+									"description": "Optional. A workspace ID.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets all of your [collections](https://www.getpostman.com/docs/collections). The response includes all of your subscribed collections."
+					},
+					"response": [
+						{
+							"name": "show tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks",
+										"1"
+									],
+									"query": [
+										{
+											"key": "workspace",
+											"value": "{{workspaceId}}",
+											"description": "Optional. A workspace ID.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 20:28:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Task 1\",\n        \"description\": \"Test Task\",\n        \"due_date\": \"09-09-2024 20:18\",\n        \"priority\": \"low\",\n        \"status\": \"failed\",\n        \"assigned_to\": {\n            \"uuid\": \"e883bf7e-90b1-45ba-a9ff-51b6c567adaf\",\n            \"name\": \"mazen Al abd\",\n            \"email\": \"bla.AL@gmail.com\",\n            \"email_verified_at\": null,\n            \"national_id\": \"014141414141\",\n            \"is_male\": 1,\n            \"deleted_at\": null\n        },\n        \"created_by\": {\n            \"uuid\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n            \"name\": \"Ahmad Mohamad\",\n            \"email\": \"admin@gmail.com\",\n            \"email_verified_at\": null,\n            \"national_id\": \"0014141414100\",\n            \"is_male\": 1,\n            \"deleted_at\": null\n        },\n        \"create\": \"2024-09-09T18:43:35.000000Z\",\n        \"update\": \"2024-09-09T20:26:23.000000Z\",\n        \"deleted_at\": null\n    },\n    \"message\": \"trans.method.GET.success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "view deleted tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTA4NTk4LCJleHAiOjE3MjU5MTIxOTgsIm5iZiI6MTcyNTkwODU5OCwianRpIjoiNGd6cWIxaE9iSldzZXpqQyIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xsd0TQDfzhhiw6XrEtYyJfCpC2IBSeu6n4CHJu3zURA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/deleted-tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"deleted-tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/deleted-tasks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"deleted-tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 19:57:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Task 2\",\n            \"description\": \"Test Task very important\",\n            \"due_date\": null,\n            \"priority\": \"very_important\",\n            \"status\": \"failed\",\n            \"assigned_to\": null,\n            \"created_by\": {\n                \"uuid\": \"d6316c50-3cb0-4f40-9074-b04a1d727fc3\",\n                \"name\": \"Ahmad Mohamad\",\n                \"email\": \"admin@gmail.com\",\n                \"email_verified_at\": null,\n                \"national_id\": \"0014141414100\",\n                \"is_male\": \"male\",\n                \"deleted_at\": null\n            },\n            \"create\": \"2024-09-09T18:57:43.000000Z\",\n            \"update\": \"2024-09-09T19:38:07.000000Z\",\n            \"deleted_at\": \"2024-09-09T19:38:07.000000Z\"\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "assigned task to user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTEyNDE0LCJleHAiOjE3MjU5MTYwMTQsIm5iZiI6MTcyNTkxMjQxNCwianRpIjoiRXNZZWJvelhlNDV0MkNEZSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9b507bHFA4xZ1lruUSg-JYSiDKlI0gGW6so7pj4nOzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/assigned/1/to/e883bf7e-90b1-45ba-a9ff-51b6c567adaf",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"assigned",
+								"1",
+								"to",
+								"e883bf7e-90b1-45ba-a9ff-51b6c567adaf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "assigned task to user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/assigned/1/to/e883bf7e-90b1-45ba-a9ff-51b6c567adaf",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"assigned",
+										"1",
+										"to",
+										"e883bf7e-90b1-45ba-a9ff-51b6c567adaf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 20:07:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"assigned successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "start task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTEyNDE0LCJleHAiOjE3MjU5MTYwMTQsIm5iZiI6MTcyNTkxMjQxNCwianRpIjoiRXNZZWJvelhlNDV0MkNEZSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9b507bHFA4xZ1lruUSg-JYSiDKlI0gGW6so7pj4nOzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/start-task/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"start-task",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "start task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/start-task/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"start-task",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 20:15:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"Done\"\n}"
+						}
+					]
+				},
+				{
+					"name": "finish task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTEyNDE0LCJleHAiOjE3MjU5MTYwMTQsIm5iZiI6MTcyNTkxMjQxNCwianRpIjoiRXNZZWJvelhlNDV0MkNEZSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9b507bHFA4xZ1lruUSg-JYSiDKlI0gGW6so7pj4nOzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/finish-task/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"finish-task",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "start task Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/finish-task/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"finish-task",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 20:18:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"Done\"\n}"
+						}
+					]
+				},
+				{
+					"name": "failed task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTEyNDE0LCJleHAiOjE3MjU5MTYwMTQsIm5iZiI6MTcyNTkxMjQxNCwianRpIjoiRXNZZWJvelhlNDV0MkNEZSIsInN1YiI6ImQ2MzE2YzUwLTNjYjAtNGY0MC05MDc0LWIwNGExZDcyN2ZjMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9b507bHFA4xZ1lruUSg-JYSiDKlI0gGW6so7pj4nOzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/failed-task/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"failed-task",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "finish task Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/failed-task/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"failed-task",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 20:26:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": null,\n    \"message\": \"Done\"\n}"
+						}
+					]
+				},
+				{
+					"name": "my tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI1OTE1MDYyLCJleHAiOjE3MjU5MTg2NjIsIm5iZiI6MTcyNTkxNTA2MiwianRpIjoiOHFaME95NWdBQTRvV0M5MyIsInN1YiI6IjdhNGYwN2Y2LWQ5MjAtNDcyNy1iZWY2LTQxZDgxNWQyNWQzZSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FY47VhrlHnVxAKggZ0_PMtEEO34NyYAL95fIkjbQBAM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/my-tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"my-tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "my tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/my-tasks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"my-tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Sep 2024 20:55:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Task 2\",\n            \"description\": \"Test Task\",\n            \"due_date\": \"09-09-2024 20:55\",\n            \"priority\": \"low\",\n            \"status\": \"pending\",\n            \"assigned_to\": \"7a4f07f6-d920-4727-bef6-41d815d25d3e\",\n            \"created_by\": \"973e41e1-0e70-4be3-b082-307697d1b666\",\n            \"create\": \"2024-09-09T20:53:37.000000Z\",\n            \"update\": \"2024-09-09T20:53:37.000000Z\",\n            \"deleted_at\": null\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						}
+					]
+				}
+			],
+			"description": "The `/collections` endpoints let you manage your [collections](https://learning.postman.com/docs/sending-requests/intro-to-collections/)."
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
